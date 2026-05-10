@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classified Dossier - FIELD NOTES</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div class="threat-ticker" id="threat-ticker">
+        <span class="ticker-close" id="close-ticker">[X]</span>
+        <div class="ticker-content">
+            <span>[US-CERT] SEVERITY HIGH: Zero-day exploit detected in active wild. Patch immediately.</span>
+            <span class="ticker-sep">||</span>
+            <span>[CISA] Alert (AA25-104A): APT groups targeting critical infrastructure.</span>
+            <span class="ticker-sep">||</span>
+            <span>[GLOBAL_INTEL] Ransomware surge tracked across financial sectors.</span>
+            <span class="ticker-sep">||</span>
+            <span>[INTERNAL] System integrity verified. No anomalous connections detected.</span>
+        </div>
+    </div>
+
+    <!-- No classification overlay for subpages to make navigation instant -->
+
+    <div class="dossier-container" style="opacity: 1;">
+        <div class="ink-stamp">CONFIDENTIAL</div>
+        <header class="dossier-header">
+            <div class="barcode"></div>
+            <div class="doc-meta">
+                <span class="glitch" data-text="DOC_ID: BLOG-INDEX">DOC_ID: BLOG-INDEX</span>
+                <span>CLEARANCE: LEVEL 4</span>
+                <span id="current-time"></span>
+            </div>
+            <h1 class="subject-title decrypt" data-text="DIRECTORY: FIELD NOTES">DIRECTORY: FIELD NOTES</h1>
+            <div class="header-divider"></div>
+            <div style="margin-top:1rem;">
+                <a href="index.html" class="secure-link">&lt; RETURN TO MAIN DOSSIER</a>
+            </div>
+        </header>
+
+        <main class="dossier-body">
+            <section class="intel-block">
+                <h2>I. INCIDENT REPORTS & ANALYSIS</h2>
+                <div class="blog-list">
+                    
+                    <div class="post-preview locked">
+                        <div class="post-meta">
+                            <span class="post-date">[ TIMESTAMP UNKNOWN ]</span>
+                            <span class="post-tags">#████████ #RESTRICTED</span>
+                        </div>
+                        <h3 class="post-title glitch" data-text="[ ENCRYPTED PAYLOAD DETECTED ]">[ ENCRYPTED PAYLOAD DETECTED ]</h3>
+                        <p class="post-excerpt" style="font-family: monospace; color: var(--accent-red); word-break: break-all;">
+                            ERR_DECRYPT_FAIL: 0x89A2 F092 11B4 A009 8F8F 100A 44C3 99B2<br>
+                            ACCESS DENIED. INSUFFICIENT CLEARANCE TO VIEW THIS RECORD.
+                        </p>
+                    </div>
+
+                    <div class="post-preview locked">
+                        <div class="post-meta">
+                            <span class="post-date">[ CORRUPTED ]</span>
+                            <span class="post-tags">#INCIDENT_RESPONSE</span>
+                        </div>
+                        <h3 class="post-title"><span class="redacted" data-reveal="Architecting a Resilient SIEM Pipeline">████████████████████████</span></h3>
+                        <p class="post-excerpt">
+                            <span class="redacted" data-reveal="Documentation on upgrading">██████████</span> the enterprise homelab with Wazuh SIEM. Configuring custom decoders to accurately detect <span class="redacted" data-reveal="Pass-the-Hash">██████████</span> and Kerberoasting attacks in real-time. [DATA EXPUNGED BY PURGE PROTOCOL]
+                        </p>
+                    </div>
+
+                    <div class="post-preview locked">
+                        <div class="post-meta">
+                            <span class="post-date">[ CLASSIFIED ]</span>
+                            <span class="post-tags">#THREAT_HUNTING</span>
+                        </div>
+                        <h3 class="post-title" style="color: #666; font-style: italic;">FILE RECORD PURGED</h3>
+                        <p class="post-excerpt" style="color: #444;">
+                            > The contents of this directory have been permanently sanitized per Directive 4-A.<br>
+                            > No recoverable data remains in this sector.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="dossier-footer">
+            <div class="header-divider"></div>
+            <p>END OF DIRECTORY.</p>
+            <p class="subtext">UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS STRICTLY PROHIBITED.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

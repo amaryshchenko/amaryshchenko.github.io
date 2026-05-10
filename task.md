@@ -1,0 +1,8 @@
+- [/] Remove System Diagnostics HUD
+    - [ ] Remove from `index.html`
+    - [ ] Remove from `app.js`
+- [ ] Create Blog Architecture
+    - [ ] Create `blog.html` (Index list)
+    - [ ] Create `post.html` (Post template)
+    - [ ] Add blog-specific CSS to `style.css`
+    - [ ] Link `index.html` to `blog.html`

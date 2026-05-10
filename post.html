@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Note - Phantom RAT Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div class="threat-ticker" id="threat-ticker">
+        <span class="ticker-close" id="close-ticker">[X]</span>
+        <div class="ticker-content">
+            <span>[US-CERT] SEVERITY HIGH: Zero-day exploit detected in active wild. Patch immediately.</span>
+            <span class="ticker-sep">||</span>
+            <span>[CISA] Alert (AA25-104A): APT groups targeting critical infrastructure.</span>
+            <span class="ticker-sep">||</span>
+            <span>[GLOBAL_INTEL] Ransomware surge tracked across financial sectors.</span>
+            <span class="ticker-sep">||</span>
+            <span>[INTERNAL] System integrity verified. No anomalous connections detected.</span>
+        </div>
+    </div>
+
+    <div class="dossier-container" style="opacity: 1;">
+        <div class="ink-stamp">CONFIDENTIAL</div>
+        <header class="dossier-header">
+            <div class="barcode"></div>
+            <div class="doc-meta">
+                <span class="glitch" data-text="DOC_ID: RPT-4029">DOC_ID: RPT-4029</span>
+                <span>CLEARANCE: LEVEL 4</span>
+                <span id="current-time"></span>
+            </div>
+            <h1 class="subject-title decrypt" data-text="FILE: PHANTOM_RAT_ANALYSIS">FILE: PHANTOM_RAT_ANALYSIS</h1>
+            <div class="header-divider"></div>
+            <div style="margin-top:1rem;">
+                <a href="blog.html" class="secure-link">&lt; RETURN TO DIRECTORY</a>
+            </div>
+        </header>
+
+        <main class="dossier-body">
+            <article class="blog-post">
+                <div class="post-meta">
+                    <span class="post-date">[ LOGGED: 2026-05-08 ]</span>
+                    <span class="post-tags">#MALWARE_ANALYSIS #REVERSE_ENGINEERING</span>
+                </div>
+                
+                <h2 class="post-main-title">Deconstructing the Phantom RAT: A Behavioral Analysis</h2>
+                
+                <div class="post-content">
+                    <p>During a routine simulated engagement, an anomalous outbound connection was detected by the <span class="intel-tooltip" data-intel="Security Information and Event Management">SIEM</span>. Further investigation isolated a custom executable payload, provisionally designated "Phantom RAT". This report details the initial analysis of its evasion techniques.</p>
+                    
+                    <h3>1. Initial Execution & Evasion</h3>
+                    <p>The payload is delivered via a standard spear-phishing macro embedded in an Excel document. Upon execution, it performs a check for virtualization environments. If VMware or VirtualBox artifacts are detected, the payload sleeps indefinitely.</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">STATIC_ANALYSIS :: evasion_check.asm</div>
+                        <pre><code>mov eax, 1
+cpuid
+bt ecx, 31
+jc detect_vm
+; Proceeds to payload execution if CF is 0
+jmp payload_start</code></pre>
+                    </div>
+
+                    <h3>2. Persistence Mechanism</h3>
+                    <p>Instead of standard registry run keys, Phantom RAT abuses the Windows Task Scheduler, creating a disguised task that masquerades as a legitimate Windows Update sub-process. This ensures the payload survives reboots while evading superficial registry scans.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">SYSLOG :: wazuh-agent</div>
+                        <pre><code>[Rule 502] Alert Level 8: Suspicious Task Creation
+Object: \Microsoft\Windows\UpdateOrchestrator\USO_Deploy_Service
+Action: Task registered with encoded PowerShell payload.</code></pre>
+                    </div>
+
+                    <h3>3. Conclusion & Remediation</h3>
+                    <p>The Phantom RAT demonstrates a moderate level of sophistication. Immediate remediation involves clearing the infected tasks and resetting compromised domain credentials. A full <span class="redacted" data-reveal="YARA rule">█████████</span> has been distributed to the endpoint protection platforms to prevent lateral spread.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer class="dossier-footer">
+            <div class="header-divider"></div>
+            <p>END OF REPORT.</p>
+            <p class="subtext">UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS STRICTLY PROHIBITED.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

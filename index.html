@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier: A. Maryshchenko</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <div class="threat-ticker" id="threat-ticker">
+        <span class="ticker-close" id="close-ticker">[X]</span>
+        <div class="ticker-content">
+            <span>[US-CERT] SEVERITY HIGH: Zero-day exploit detected in active wild. Patch immediately.</span>
+            <span class="ticker-sep">||</span>
+            <span>[CISA] Alert (AA25-104A): APT groups targeting critical infrastructure.</span>
+            <span class="ticker-sep">||</span>
+            <span>[GLOBAL_INTEL] Ransomware surge tracked across financial sectors.</span>
+            <span class="ticker-sep">||</span>
+            <span>[INTERNAL] System integrity verified. No anomalous connections detected.</span>
+        </div>
+    </div>
+
+    <div id="classification-overlay">
+        <div class="overlay-content">
+            <div class="seal"></div>
+            <h1 class="decrypt" data-text="TOP SECRET // EYES ONLY">TOP SECRET // EYES ONLY</h1>
+            <p class="decrypt" data-text="ESTABLISHING SECURE CONNECTION...">ESTABLISHING SECURE CONNECTION...</p>
+        </div>
+    </div>
+
+    <div class="dossier-container">
+        <div class="ink-stamp">CONFIDENTIAL</div>
+        <header class="dossier-header">
+            <div class="barcode"></div>
+            <div class="doc-meta">
+                <span class="glitch" data-text="DOC_ID: 884-AM-25">DOC_ID: 884-AM-25</span>
+                <span>CLEARANCE: LEVEL 4</span>
+                <span id="current-time"></span>
+            </div>
+            <h1 class="subject-title decrypt" data-text="SUBJECT: ANTON MARYSHCHENKO">SUBJECT: MARYSHCHENKO, ANTON</h1>
+            <div class="header-divider"></div>
+        </header>
+
+        <main class="dossier-body">
+            <section class="intel-block">
+                <h2>I. IDENTIFICATION</h2>
+                <div class="ident-wrapper" style="position: relative;">
+                    <div class="invisible-ink" style="top: -20px; left: 160px; transform: rotate(-5deg); font-size: 1.4rem;">"High aptitude for lateral movement" - Director</div>
+                    <div class="photo-placeholder">
+                        <div class="photo-inner">
+                            <span class="photo-text">NO_PHOTO_AVAILABLE</span>
+                        </div>
+                    </div>
+                    <div class="data-grid">
+                        <div class="data-row">
+                            <span class="label">CURRENT STATUS:</span>
+                            <span class="value">Cybersecurity Student <span class="highlight-serif">/</span>
+                                Enthusiast</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">LOCATION:</span>
+                            <span class="value">Rzeszów, Poland</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">LANGUAGES:</span>
+                            <span class="value">English (B2), Polish (B2), Ukrainian (Native)</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">COMMS_LINK:</span>
+                            <span class="value">
+                                <a href="mailto:carryratrotcat@gmail.com" class="secure-link">EMAIL</a> &nbsp;|&nbsp;
+                                <a href="https://github.com/amaryshchenko" target="_blank"
+                                    class="secure-link">GITHUB</a>
+                            </span>
+                        </div>
+                        <div class="data-row" style="margin-top: 0.8rem;">
+                            <span class="label">ARCHIVES:</span>
+                            <span class="value">
+                                <a href="blog.html" class="secure-link"
+                                    style="color: var(--accent-red); font-weight: bold; letter-spacing: 0.1em;">[ ACCESS
+                                    FIELD_NOTES // BLOG ]</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="intel-block">
+                <h2>II. CAPABILITIES & ASSETS</h2>
+                <p class="summary-text">Subject is actively developing foundational capabilities in <span
+                        class="highlight-serif italic">offensive security methodologies</span>, vulnerability
+                    assessment, and threat hunting. Known to frequent training grounds (TryHackMe, HackTheBox) to build
+                    practical skills in privilege escalation, exploitation, and cryptographic analysis.</p>
+
+                <div style="position: relative;">
+                    <div class="invisible-ink" style="top: -25px; right: 10px; transform: rotate(7deg); color: #00ffcc; text-shadow: 0 0 8px #00ffcc;">Currently studying for OSCP certification.</div>
+                    <div class="capabilities-list">
+                        <span class="cap-item decrypt-late" data-text="Bash / Python">Bash / Python</span>
+                    <span class="cap-item decrypt-late" data-text="SQL / Web Exploitation">SQL / Web Exploitation</span>
+                    <span class="cap-item decrypt-late" data-text="Metasploit Framework">Metasploit Framework</span>
+                    <span class="cap-item decrypt-late" data-text="Burp Suite">Burp Suite</span>
+                    <span class="cap-item decrypt-late" data-text="Nmap / Wireshark">Nmap / Wireshark</span>
+                    <span class="cap-item decrypt-late" data-text="Active Directory">Active Directory</span>
+                    <span class="cap-item decrypt-late" data-text="Wazuh SIEM">Wazuh, Splunk</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="intel-block">
+                <h2>III. RECENT OPERATIONS</h2>
+
+                <div class="operation" style="position: relative;">
+                    <div class="invisible-ink" style="bottom: 10px; right: 20px; transform: rotate(-4deg); color: #ff00ff; text-shadow: 0 0 8px #ff00ff;">Note: Strong methodology. Excellent pivot from initial phishing payload to full Domain Admin compromise.</div>
+                    <div class="op-header">
+                        <h3>OP: ENTERPRISE HOMELAB (PROJECT SP)</h3>
+                        <a href="https://github.com/amaryshchenko/project-sp" class="secure-link" target="_blank">[VIEW
+                            ARCHIVE]</a>
+                    </div>
+                    <p class="op-details">
+                        Subject architected a 6-node corporate infrastructure featuring AD, DNS, DHCP, and SSO. Executed
+                        a full-spectrum kill chain simulation involving reconnaissance, credential brute-forcing,
+                        phishing, lateral movement, privilege escalation, and data exfiltration.
+                    </p>
+                    <div class="kill-chain-log">
+                        <div class="log-header">ACTION_REPORT :: KILL_CHAIN_SEQUENCE</div>
+                        <div class="log-entry">
+                            <span class="timestamp">[T+00:00]</span>
+                            <span class="phase">RECONNAISSANCE</span>
+                            <span class="log-desc">Mapped 6-node network (<span class="intel-tooltip"
+                                    data-intel="Active Directory (Microsoft)">AD</span>, <span class="intel-tooltip"
+                                    data-intel="Domain Name System">DNS</span>, <span class="intel-tooltip"
+                                    data-intel="Dynamic Host Configuration Protocol">DHCP</span>, <span
+                                    class="intel-tooltip" data-intel="Single Sign-On">SSO</span>) via active
+                                scanning.</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="timestamp">[T+01:14]</span>
+                            <span class="phase">INFILTRATION</span>
+                            <span class="log-desc">Credential brute-force executed. Initial foothold established.</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="timestamp">[T+02:45]</span>
+                            <span class="phase">LATERAL_MOVEMENT</span>
+                            <span class="log-desc">Phishing payload executed. Reverse shell gained on
+                                WIN_11_CLIENT.</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="timestamp">[T+03:12]</span>
+                            <span class="phase">PRIVILEGE_ESCALATION</span>
+                            <span class="log-desc">Domain Admin compromised on WIN_SERVER_2025. Persistence
+                                achieved.</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="timestamp">[T+04:28]</span>
+                            <span class="phase">DETECTION_ANALYSIS</span>
+                            <span class="log-desc">Reviewed Wazuh SIEM alerts to analyze attack signatures and
+                                indicators.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="operation">
+                    <div class="op-header">
+                        <h3>OP: CONTINUOUS ASSESSMENT</h3>
+                    </div>
+                    <p class="op-details">
+                        Ongoing infiltration and analysis of simulated environments. Web application security via
+                        PortSwigger Academy. Consistent engagement in capture-the-flag exercises.
+                    </p>
+                </div>
+            </section>
+
+            <section class="intel-block">
+                <h2>IV. ACADEMIC & TRAINING RECORDS</h2>
+                <div class="operation">
+                    <div class="op-header">
+                        <h3>UNIVERSITY OF INFORMATION TECHNOLOGY AND MANAGEMENT, RZESZÓW</h3>
+                    </div>
+                    <p class="op-details">Higher Education | Cybersecurity | 2025 – Present</p>
+                </div>
+                <div class="operation">
+                    <div class="op-header">
+                        <h3>MANKIVSKA ZZSO I–III STOPNIA</h3>
+                    </div>
+                    <p class="op-details">Secondary Education | 2013 – 2025</p>
+                </div>
+            </section>
+
+            <section class="intel-block biometric-section">
+                <h2>V. SECURE ASSETS (RESTRICTED)</h2>
+                <div class="auth-container" style="position: relative;">
+                    <div class="invisible-ink" style="top: -30px; left: 50%; transform: translateX(-50%) rotate(2deg); color: #00ffcc; text-shadow: 0 0 8px #00ffcc;">Hold for 2.5s to bypass DRM lock.</div>
+                    <div class="fingerprint-scanner" id="biometric-scanner">
+                        <div class="scanner-line"></div>
+                        <span class="scanner-text">[ PRESS AND HOLD FOR CLEARANCE ]</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="auth-progress"></div>
+                    </div>
+                    <p id="auth-status" class="font-mono">AWAITING BIOMETRIC INPUT...</p>
+
+                    <div id="secure-payload" style="display: none;">
+                        <div class="payload-content">
+                            <p class="success-msg decrypt-late" data-text="AUTHORIZATION ACCEPTED. FILES UNLOCKED.">
+                                AUTHORIZATION ACCEPTED. FILES UNLOCKED.</p>
+                            <div class="file-links">
+                                <a href="CV_Anton_Maryshchenko.pdf" target="_blank"
+                                    class="secure-link file-btn decrypt-late" data-text="> DOWNLOAD_CV.PDF">>
+                                    DOWNLOAD_CV.PDF</a>
+                                <a href="Certificates_Anton_Maryshchenko.pdf" target="_blank"
+                                    class="secure-link file-btn decrypt-late" data-text="> VIEW_CERTIFICATES.PDF">>
+                                    VIEW_CERTIFICATES.PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer class="dossier-footer">
+            <div class="header-divider"></div>
+            <p>END OF FILE.</p>
+            <p class="subtext">UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS STRICTLY PROHIBITED.</p>
+            <p class="subtext" style="margin-top: 2rem;">
+                <span id="btn-purge" class="secure-link" style="cursor: pointer; color: #444;">[ PURGE RECORD ]</span>
+            </p>
+        </main>
+    </div>
+
+    <!-- UV Scanner Side Tab -->
+    <button id="btn-uv" class="uv-side-tab">
+        <span class="hw-led"></span>
+        <span class="hw-text">UV_SCANNER</span>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
