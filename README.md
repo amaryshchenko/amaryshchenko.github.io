@@ -19,14 +19,5 @@ This repository contains the source code for my professional cybersecurity portf
 ## Live Demo
 You can view the live dossier here: [https://amaryshchenko.github.io/](https://amaryshchenko.github.io/)
 
-## Usage
-To run the portfolio locally, simply clone the repository and open `index.html` in any modern web browser. No build steps or local servers are required.
-
-```bash
-git clone https://github.com/amaryshchenko/amaryshchenko.github.io.git
-cd amaryshchenko.github.io
-# Open index.html
-```
-
 ## License
 Created by Anton Maryshchenko. All rights reserved.
